@@ -1,4 +1,3 @@
-/* App.css */
 .App {
   font-family: Arial, sans-serif;
   padding: 20px;
@@ -62,5 +61,5 @@
 }
 .chart-container {
   display: flex;
-  justify-content: space-between; /* Grafikler arasında boşluk bırakır */
+  justify-content: space-between;
 }

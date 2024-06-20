@@ -1,4 +1,3 @@
-// TeamsAndEmployees.js
 import React from 'react';
 
 function TeamsAndEmployees({ teams }) {

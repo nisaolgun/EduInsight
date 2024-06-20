@@ -6,7 +6,6 @@ import SkillsChart from './SkillsChart';
 import Button from './Button';
 
 function App() {
-  // State'ler
   const [totalEmployees, setTotalEmployees] = useState(0);
   const [totalCourses, setTotalCourses] = useState(0);
   const [totalExams, setTotalExams] = useState(0);
@@ -19,7 +18,7 @@ function App() {
     try {
       const response = await fetch('https://demotrainiq.com/case/dashboard');
       const data = await response.json();
-      setTotalEmployees(data.data.total_employees); // "data" objesi içinde olduğu için "data.data" olarak erişiyoruz
+      setTotalEmployees(data.data.total_employees);
       setTotalCourses(data.data.total_completed_courses);
       setTotalExams(data.data.total_completed_exams);
       setTotalTeams(data.data.teams.length);
@@ -30,23 +29,23 @@ function App() {
     }
   };
 
-  // ComponentDidMount benzeri
+
   useEffect(() => {
     fetchData();
   }, []);
 
-  // Dummy fonksiyonlar
+
   const handleCreateNewTeam = () => {
-    // Yeni ekip oluşturma işlemleri
+    
   };
 
   const handleAddNewEmployee = () => {
-    // Yeni çalışan ekleme işlemleri
+ 
   };
 
   return (
     <div className="App">
-      {/* Genel Bilgiler Bileşeni */}
+      {}
       <GeneralInfo
         totalEmployees={totalEmployees}
         totalCourses={totalCourses}
@@ -54,16 +53,16 @@ function App() {
         totalTeams={totalTeams}
       />
 
-      {/* Grafiklerin bulunduğu ana div */}
+      {}
       <div className="chart-container">
-        {/* Aktivite Grafiği Bileşeni */}
+        {}
         <ActivityChart activityData={activityData} />
 
-        {/* Yetenekler Grafiği Bileşeni */}
+        {}
         <SkillsChart skillsData={skillsData} />
       </div>
 
-      {/* Dummy Düğmeler */}
+      {}
       <Button text="Create New Team" onClick={handleCreateNewTeam} />
       <Button text="Add New Employee to a Team" onClick={handleAddNewEmployee} />
     </div>
